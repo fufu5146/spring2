@@ -65,21 +65,21 @@ public class DoctorwhoApplication {
     }
     class ExtendedDoctor extends Doctor {
 
-        private String nbEpisode;
-        private String age;
+        private String numberOfEpisodes;
+        private String ageAtStart;
     
-        public ExtendedDoctor(String name, String number,String nbEpisode, String age) {
+        public ExtendedDoctor(String name, String number,String numberOfEpisodes, String ageAtStart) {
             super(name, number);
-            this.nbEpisode = nbEpisode;
-            this.age = age;
+            this.numberOfEpisodes = numberOfEpisodes;
+            this.ageAtStart = ageAtStart;
         }
     
         public String getDetails() {
-            return age;
+            return ageAtStart;
         }
 
         public String getNbEpisode() {
-            return nbEpisode;
+            return numberOfEpisodes;
         }
 
         public void setNbEpisode(String nbEpisode) {
