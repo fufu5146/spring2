@@ -82,16 +82,16 @@ public class DoctorwhoApplication {
             return numberOfEpisodes;
         }
 
-        public void setNbEpisode(String nbEpisode) {
-            this.nbEpisode = nbEpisode;
+        public void setNbEpisode(String numberOfEpisodes) {
+            this.numberOfEpisodes = numberOfEpisodes;
         }
 
         public String getAge() {
-            return age;
+            return ageAtStart;
         }
 
-        public void setAge(String age) {
-            this.age = age;
+        public void setAge(String ageAtStart) {
+            this.ageAtStart = ageAtStart;
         }
     }
 }
