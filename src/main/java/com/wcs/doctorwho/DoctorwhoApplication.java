@@ -31,9 +31,9 @@ public class DoctorwhoApplication {
         {
             if(details)
             {
-                return new ExtendedDoctor(acteurs[numero-9],id[numero-9],episode[numero-9], age[numero-9]);
+                return new ExtendedDoctor(acteurs[numero-9],Integer.parseInt(id[numero-9]),Integer.parseInt(episode[numero-9]), Integer.parseInt(age[numero-9]));
             }
-            return new Doctor(acteurs[numero-9], id[numero-9]);   
+            return new Doctor(acteurs[numero-9], Integer.parseInt(id[numero-9]));   
         }
         else if(numero>=1 && numero<=8)
         {
@@ -48,9 +48,9 @@ public class DoctorwhoApplication {
     class Doctor {
 
         private String name;
-        private String number;
+        private int number;
 
-        public Doctor(String name, String number) {
+        public Doctor(String name, int number) {
             this.name = name;
             this.number = number;
         }
@@ -59,38 +59,36 @@ public class DoctorwhoApplication {
             return name;
         }
 
-        public String getNumber() {
+        public int getNumber() {
             return number;
         }
     }
     class ExtendedDoctor extends Doctor {
 
-        private String numberOfEpisodes;
-        private String ageAtStart;
+        private int numberOfEpisodes;
+        private int ageAtStart;
     
-        public ExtendedDoctor(String name, String number,String numberOfEpisodes, String ageAtStart) {
+        public ExtendedDoctor(String name, int number,int numberOfEpisodes, int ageAtStart) {
             super(name, number);
             this.numberOfEpisodes = numberOfEpisodes;
             this.ageAtStart = ageAtStart;
         }
     
-        public String getDetails() {
-            return ageAtStart;
-        }
+        
 
-        public String getNbEpisode() {
+        public int getNumberOfEpisodes() {
             return numberOfEpisodes;
         }
 
-        public void setNbEpisode(String numberOfEpisodes) {
+        public void setNumberOfEpisodes(int numberOfEpisodes) {
             this.numberOfEpisodes = numberOfEpisodes;
         }
 
-        public String getAge() {
+        public int getAgeAtStart() {
             return ageAtStart;
         }
 
-        public void setAge(String ageAtStart) {
+        public void setAgeAtStart(int ageAtStart) {
             this.ageAtStart = ageAtStart;
         }
     }
